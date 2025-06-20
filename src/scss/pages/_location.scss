@@ -4,6 +4,18 @@
 .location {
   &__image img {
     width: 100%;
+    position: relative;
+  }
+
+  &__pin img {
+    position: absolute;
+    top: 270px;
+    left: 173px;
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
   }
 
   &__details {
