@@ -22,3 +22,20 @@
     text-align: left;
   }
 }
+
+.hero__footer {
+  margin-top: 8rem;
+  background-color: $black;
+  padding: 2rem 1rem 3rem 1rem;
+  margin: 0;
+
+  h1,
+  h2,
+  p {
+    color: white;
+  }
+
+  // &__media a img {
+  //   filter: brightness(0) saturate(100%) invert(0%);
+  // }
+}
