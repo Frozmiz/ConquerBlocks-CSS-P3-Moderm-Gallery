@@ -1,2 +1,33 @@
 @use "../abstracts/_variables" as *;
 @use "../abstracts/_mixins" as *;
+
+.footer {
+  background-color: $black;
+  padding: 50px 10px 40px 30px;
+  margin-top: 8rem;
+
+  &__title {
+    margin-bottom: 32px;
+    font-size: 22px;
+    max-width: 20ch;
+    text-align: left;
+    color: white;
+    line-height: 1.3rem;
+  }
+
+  &__subtitle {
+    font-family: $secondary-font;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    color: white;
+    max-width: 45ch;
+    text-align: left;
+  }
+
+  &__media {
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+  }
+}

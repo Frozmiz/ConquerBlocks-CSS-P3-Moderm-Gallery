@@ -35,34 +35,36 @@
 @mixin button($bg-color: $black, $bg2-color: $orange) {
   display: inline-flex;
   text-decoration: none;
+  justify-content: center;
+  align-items: stretch;
 
   .hero__button-text {
     font-family: $primary-font;
     background-color: $bg-color;
     line-height: 1;
     color: white;
-    padding: 1.2rem 2rem;
+    padding: 2rem 2rem;
     display: inline-block;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     letter-spacing: 3.64px;
   }
 
   .hero__button-icon {
     color: white;
-    padding: 1rem 1.3rem;
+    padding: 1.4rem 1.5rem;
     background-color: $bg2-color;
-    display: inline-flex;
+    font-size: 29px;
+    align-items: center;
+    justify-content: center;
   }
 
   &:hover {
     .hero__button-text {
       background-color: $bg2-color;
-      color: $bg-color;
     }
 
     .hero__button-icon {
       background-color: $bg-color;
-      color: $bg2-color;
     }
   }
 }
