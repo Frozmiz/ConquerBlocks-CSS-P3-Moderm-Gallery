@@ -1,0 +1,10 @@
+@use "../abstracts/_variables" as *;
+@use "../abstracts/_mixins" as *;
+
+.button1 {
+  @include button($bg-color: $black, $bg2-color: $orange);
+}
+
+.button2 {
+  @include button($bg-color: $orange, $bg2-color: $black);
+}
