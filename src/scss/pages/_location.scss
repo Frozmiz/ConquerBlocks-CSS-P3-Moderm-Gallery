@@ -2,15 +2,12 @@
 @use "../abstracts/_mixins" as *;
 
 .location {
-  &__image img {
+  &__image-mobile {
     width: 100%;
     position: relative;
-  }
-
-  &__pin img {
-    position: absolute;
-    top: 270px;
-    left: 173px;
+    @include breakpoint(tablet) {
+      display: none;
+    }
   }
 
   &__button {
@@ -66,8 +63,10 @@
 
 .footer--location {
   background-color: $orange;
-  padding: 2rem 1rem 3rem 1rem;
-
+  padding: 5rem 3rem 12rem 3rem;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   h1,
   h2,
   p {
@@ -76,5 +75,13 @@
 
   .footer__media a img {
     filter: brightness(0) saturate(100%) invert(0%);
+  }
+}
+
+.location__image-long {
+  display: none;
+
+  @include breakpoint(tablet) {
+    display: block;
   }
 }
