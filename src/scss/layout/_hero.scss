@@ -2,6 +2,14 @@
 @use "../abstracts/_mixins" as *;
 
 .hero {
+  &__content_img {
+    width: 100%;
+  }
+
+  &__content__text {
+    margin-left: 1.2rem;
+  }
+
   &__title {
     margin-top: 32px;
     margin-bottom: 32px;
@@ -21,6 +29,43 @@
     max-width: 45ch;
     text-align: left;
   }
+
+  &__content__img-mobile {
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+
+  &__content__img-tablet {
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+}
+
+.container-full {
+  @include breakpoint(tablet) {
+    display: flex;
+    position: relative;
+  }
+
+  .hero__content__img-tablet {
+    @include breakpoint(tablet) {
+      display: block;
+      width: 35rem;
+    }
+  }
+}
+
+.hero__content__text {
+  @include breakpoint(tablet) {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 200px;
+    right: 0;
+    left: 500px;
+  }
 }
 
 .hero__footer {
@@ -34,8 +79,4 @@
   p {
     color: white;
   }
-
-  // &__media a img {
-  //   filter: brightness(0) saturate(100%) invert(0%);
-  // }
 }
