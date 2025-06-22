@@ -11,9 +11,8 @@
 }
 
 .container-full {
-  @include breakpoint(desktop) {
-    max-width: 920px;
-    margin-left: 0;
-    margin-right: 0;
-  }
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
