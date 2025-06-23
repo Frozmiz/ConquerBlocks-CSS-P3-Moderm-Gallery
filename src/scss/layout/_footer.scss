@@ -3,8 +3,14 @@
 
 .footer {
   background-color: $black;
-  padding: 50px 10px 40px 30px;
-  margin-top: 8rem;
+  padding: 50px 30px 40px 30px;
+  @include breakpoint(tablet) {
+    display: flex;
+  }
+  @include breakpoint(desktop) {
+    display: flex;
+    padding: 50px 100px 40px 100px;
+  }
 
   &__title {
     margin-bottom: 32px;

@@ -33,7 +33,7 @@
 
   .container {
     @include breakpoint(tablet) {
-      margin-bottom: 3rem;
+      margin-bottom: 6rem;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto auto;

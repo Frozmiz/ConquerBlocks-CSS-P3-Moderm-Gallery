@@ -68,3 +68,17 @@
     }
   }
 }
+
+// Mixin for images
+
+@mixin responsive-image($mobile, $tablet, $desktop) {
+  display: $mobile;
+
+  @include breakpoint(tablet) {
+    display: $tablet;
+  }
+
+  @include breakpoint(desktop) {
+    display: $desktop;
+  }
+}

@@ -3,21 +3,37 @@
 
 .location {
   &__image-mobile {
-    width: 100%;
     position: relative;
-    @include breakpoint(tablet) {
-      display: none;
-    }
   }
 
   &__button {
     position: absolute;
     top: 0;
+    @include breakpoint(tablet) {
+      left: 5%;
+    }
+    @include breakpoint(desktop) {
+      left: 11%;
+    }
   }
 
   &__details {
     background-color: $black;
     padding: 2.1rem 1rem 3rem 1rem;
+
+    .container-full {
+      @include breakpoint(tablet) {
+        display: flex;
+        padding: 1rem;
+        .ourLocation {
+          max-width: 30%;
+          padding: 2rem;
+        }
+        .postcode-section {
+          padding: 2rem 5rem;
+        }
+      }
+    }
 
     &__title {
       font-size: 60px;
@@ -61,9 +77,10 @@
   }
 }
 
-.footer--location div {
+// footer
+
+.footer {
   background-color: $orange;
-  padding: 5rem 3rem 12rem 3rem;
   @include breakpoint(tablet) {
     display: flex;
   }
@@ -78,20 +95,14 @@
   }
 }
 
-.location__image-long {
-  display: none;
+// Responsive images mixin
 
-  @include breakpoint(tablet) {
-    display: block;
-  }
-  @include breakpoint(desktop) {
-    display: none;
-  }
+.location__image-mobile {
+  @include responsive-image(block, block, none);
 }
-
+.location__image-long {
+  @include responsive-image(none, none, none);
+}
 .location__image-desktop {
-  display: none;
-  @include breakpoint(desktop) {
-    display: block;
-  }
+  @include responsive-image(none, none, block);
 }
