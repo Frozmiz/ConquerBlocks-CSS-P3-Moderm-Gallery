@@ -33,6 +33,18 @@
           padding: 2rem 5rem;
         }
       }
+
+      @include breakpoint(desktop) {
+        justify-content: space-between;
+        padding: 4rem 6rem 1rem 6rem;
+        .ourLocation {
+          max-width: 20%;
+          padding: 2rem;
+        }
+        .postcode-section {
+          padding: 2rem 5rem;
+        }
+      }
     }
 
     &__title {
@@ -77,13 +89,9 @@
   }
 }
 
-// footer
-
 .footer {
   background-color: $orange;
-  @include breakpoint(tablet) {
-    display: flex;
-  }
+
   h1,
   h2,
   p {
@@ -92,6 +100,10 @@
 
   .footer__media a img {
     filter: brightness(0) saturate(100%) invert(0%);
+
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(100%);
+    }
   }
 }
 
